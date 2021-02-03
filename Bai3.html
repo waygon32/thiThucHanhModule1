@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isFibonacci(x) {
+        let fibonacci = [];
+        let a = 0;
+        let b = 0;
+        let c = 1;
+        let check = false
+        for (let i = 1; c <= x; i++) {
+            fibonacci.push(c);
+            a = b;
+            b = c;
+            c = a + b;
+        }
+        if (fibonacci[fibonacci.length - 1] == x) {
+            check = true;
+        }
+        return check;
+    }
+
+    let x = prompt("nhập số cần tìm");
+    alert(isFibonacci(x));
+</script>
